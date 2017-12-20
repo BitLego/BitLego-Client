@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Welcome to Vue</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.1/axios.min.js"></script>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="login.js"></script>
+</head>
+
+<body>
+
+        <script type="text/x-template" id="login-form">
+            <form @submit.prevent="login()">
+                <input type="text" placeholder="id입력해라~" v-model="user_id">
+                <input type="password" placeholder="패스워드! 패스해임마!" v-model="password">
+                <button type="submit">Login</button>
+            </form>
+        </script>
+
+    <div id="login">
+        <login></login>
+    </div>
+
+</body>
+
+</html>
