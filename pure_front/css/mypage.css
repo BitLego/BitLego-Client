@@ -1,0 +1,119 @@
+a, a:visited {
+  color: #003569;
+  text-decoration: none;
+}
+
+a.click {
+  color: #262626;
+}
+
+.click {
+  border-top: 1px solid #262626;
+}
+
+.mypage-profile {
+  flex-grow: 1;
+  margin-bottom: 44px;
+  border-bottom: 1px solid;
+}
+
+.profile-photo-container {
+  margin-right: 30px;
+}
+
+.profile-photo {
+  display: block;
+  height: 152px;
+  width: 152px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.profile-photo-btn {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+}
+
+.profile-photo-img {
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.profile-photo-input {
+  display: none !important;
+}
+
+.profile-info-container {
+  flex-grow: 2;
+}
+
+.profile-info-title {
+  margin-bottom: 20px;
+}
+
+.nick-h1 {
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 200;
+}
+
+.edit-profile-a {
+  margin-left: 20px;
+}
+
+.edit-profile-btn {
+  padding: 0 24px;
+}
+
+.profile-info-follow {
+  margin-bottom: 20px;
+}
+
+.info-follow-elem:first-child {
+  margin-left: 0;
+}
+
+.info-follow-elem {
+  font-size: 16px;
+  margin-right: 40px;
+}
+
+.profile-info-follow-number {
+  color: #262626;
+  font-weight: 600;
+}
+
+.profile-info-desc {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.name-h1 {
+  display: inline;
+  font-weight: 600;
+}
+
+.nav-a {
+  display: flex;
+  height: 52px;
+  justify-content: center;
+  flex-direction:row;
+  margin-right: 60px;
+  cursor: pointer;
+}
+
+.content-container {
+  flex-direction: row;
+}
+.content{
+  display: block;
+  position: relative;
+  width:100%;
+  margin-right: 28px;
+  flex: 1 0 0%;
+}
