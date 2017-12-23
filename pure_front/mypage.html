@@ -19,7 +19,7 @@
         </div>
       </div>
       <div class="global-search">
-        <input type="text" class="global-search-bar" placeholder="Search">
+        <input type="text" class="global-search-bar text-primary-color" placeholder="Search">
       </div>
       <nav class="global-menu">
         <a href="mypage.html" class="mypage-icon">
@@ -47,23 +47,23 @@
         <section class="profile-info-container">
           <div class="profile-info-title">
             <h1 class="nick-h1">firepunch</h1>
-            <a class="edit-profile-a" href="edit.html">
-              <button class="edit-profile-btn">
+            <a class="profile-edit-a" href="edit.html">
+              <button class="profile-edit-btn">
                 Edit Profile
               </button>
             </a>
           </div>
           <ul class="profile-info-follow">
             <li class="info-follow-elem">
-              <span class="profile-info-follow-number"></span>
+              <span class="profile-info-follow-number">5</span>
               posts
             </li>
             <li class="info-follow-elem">
-              <span class="profile-info-follow-number"></span>
+              <span class="profile-info-follow-number">66</span>
               followers
             </li>
             <li class="info-follow-elem">
-              <span class="profile-info-follow-number"></span>
+              <span class="profile-info-follow-number">86</span>
               following
             </li>
           </ul>
@@ -74,9 +74,9 @@
         </section>
       </header>
       <div class="mypage-nav">
-        <a class="nav-a" href="/firepunch">POSTS</a>
-        <a class="nav-a" href="/firepunch/shared">SHARED</a>
-        <a class="nav-a" href="/firepunch/saved">SAVED</a>
+        <a class="nav-a primary-text-color" href="/firepunch">POSTS</a>
+        <a class="nav-a secondary-text-color" href="/firepunch/shared">SHARED</a>
+        <a class="nav-a secondary-text-color" href="/firepunch/liked">LIKED</a>
       </div>
       <div class="mypage-content">
         <div class="content-container">
@@ -87,7 +87,21 @@
       </div>
     </article>
   </main>
-  <footer class="footer"></footer>
+  <footer class="footer" role="contentinfo">
+    <div class="footer-container">
+      <nav>
+        <ul>
+          <li class="footer-li">
+            <a href="">ABOUT US</a>
+          </li>
+          <li class="footer-li">
+            <a href="">GITHUB</a>
+          </li>
+        </ul>
+      </nav>
+      <span class="secondary-text-color">© 2018 LEGOBIT</span>
+    </div>
+  </footer>
 </section>
 
 </body>

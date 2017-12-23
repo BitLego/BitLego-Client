@@ -5,7 +5,7 @@ html, body {
   padding: 0;
 }
 
-div, main, nav, section, footer, article {
+div, header, main, nav, section, footer, article {
   -webkit-box-align: stretch;
   -webkit-align-items: stretch;
   -ms-flex-align: stretch;
@@ -151,7 +151,7 @@ div, main, nav, section, footer, article {
   justify-content: flex-end;
 }
 
-.mypage-icon{
+.mypage-icon {
   height: 32px;
   width: 32px;
   background: url('../../design/lg-lego-face.png') center no-repeat;
@@ -170,15 +170,39 @@ div, main, nav, section, footer, article {
 }
 
 .footer {
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  -webkit-box-ordinal-group: 5;
-  -webkit-order: 4;
-  -ms-flex-order: 4;
-  order: 4;
+  background-color: #fafafa;
+  -webkit-box-ordinal-group: 6;
+  -webkit-order: 5;
+  -ms-flex-order: 5;
+  order: 5;
+  padding: 0 20px;
+}
 
-  height: 74px;
-  background: #201d23;
+.footer-container {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 38px 0;
+
+  font-size: 12px;
+  font-weight: 600;
+  margin: 0 auto;
+  text-transform: uppercase;
+  max-width: 1010px;
+  width: 100%;
+}
+
+.footer-li {
+  display: inline-block;
+  margin-bottom: 7px;
+  margin-right: 16px;
 }

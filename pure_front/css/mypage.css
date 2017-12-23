@@ -11,7 +11,7 @@ a.click {
   border-top: 1px solid #262626;
 }
 
-.mypage-article{
+.mypage-article {
   box-sizing: content-box;
   padding: 60px 20px 0;
   width: calc(100% - 40px);
@@ -19,13 +19,24 @@ a.click {
   margin: 0 auto 30px;
   max-width: 935px;
 }
+
 .mypage-profile {
-  flex-grow: 1;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   margin-bottom: 44px;
-  border-bottom: 1px solid;
 }
 
 .profile-photo-container {
+  -webkit-flex-basis: 0;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
   margin-right: 30px;
 }
 
@@ -35,6 +46,12 @@ a.click {
   width: 152px;
   margin-left: auto;
   margin-right: auto;
+  background-color: #fafafa;
+  border-radius: 50%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
 }
 
 .profile-photo-btn {
@@ -57,29 +74,73 @@ a.click {
 }
 
 .profile-info-container {
+  -webkit-flex-basis: 30px;
+  -ms-flex-preferred-size: 30px;
+  flex-basis: 30px;
+  -webkit-box-flex: 2;
+  -webkit-flex-grow: 2;
+  -ms-flex-positive: 2;
   flex-grow: 2;
+  color: #262626;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  min-width: 0;
 }
 
 .profile-info-title {
   margin-bottom: 20px;
+  flex-direction: row;
 }
 
 .nick-h1 {
   font-size: 32px;
   line-height: 40px;
   font-weight: 200;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 0;
+  padding: 0;
 }
 
-.edit-profile-a {
+.profile-edit-a {
   margin-left: 20px;
+  background: 0 0;
+
 }
 
-.edit-profile-btn {
+.profile-edit-btn {
+  background: 0 0;
+  color: #262626;
+
   padding: 0 24px;
+  -webkit-appearance: none;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 26px;
+  outline: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  border: 1px solid #dbdbdb;
+  color: #262626;
 }
 
 .profile-info-follow {
+  padding: 0;
   margin-bottom: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .info-follow-elem:first-child {
@@ -89,6 +150,7 @@ a.click {
 .info-follow-elem {
   font-size: 16px;
   margin-right: 40px;
+  display: block;
 }
 
 .profile-info-follow-number {
@@ -99,6 +161,7 @@ a.click {
 .profile-info-desc {
   font-size: 16px;
   line-height: 24px;
+  display: block;
 }
 
 .name-h1 {
@@ -106,22 +169,58 @@ a.click {
   font-weight: 600;
 }
 
-.nav-a {
+.mypage-nav {
+  border-top: 1px solid #efefef;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  height: 52px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  font-size: 12px;
+  font-weight: 600;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
-  flex-direction:row;
-  margin-right: 60px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.nav-a {
   cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 52px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 60px;
 }
 
 .content-container {
   flex-direction: row;
 }
-.content{
+
+.content {
   display: block;
   position: relative;
-  width:100%;
+  width: 100%;
   margin-right: 28px;
   flex: 1 0 0%;
 }
