@@ -1,0 +1,24 @@
+{
+  "name": "legobit-client",
+  "version": "1.0.0",
+  "description": "It is a web application for merge bits. You can share or make something new very easily.",
+  "main": "index.js",
+  "dependencies": {
+    "vue": "^2.5.13",
+    "vue-cli": "^2.9.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BitLego/BitLego-Client.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BitLego/BitLego-Client/issues"
+  },
+  "homepage": "https://github.com/BitLego/BitLego-Client#readme"
+}
