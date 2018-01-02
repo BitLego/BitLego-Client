@@ -20,16 +20,16 @@ export default {
   name: 'Login',
   data () {
     return {
-      title: 'Login', 
+      title: 'Login',
       forms: [
 				{
-					label: 'Identity', 
-					name: 'user_id', 
+					label: 'Identity',
+					name: 'user_id',
 					type: 'text'
 				},
 				{
-					label: 'Password', 
-					name: 'password', 
+					label: 'Password',
+					name: 'password',
 					type: 'password'
 				}
       ]

@@ -9,6 +9,7 @@
           <ul>
             <li><a href="/#/login/">login</a></li>
             <li><a href="/#/join/">join</a></li>
+            <li><a href="/#/mypage/">mypage</a></li>
           </ul>
         </div>
       </div>
@@ -49,8 +50,8 @@ export default {
   transition: .2s;
 }
 
-::-webkit-selection, 
-::-moz-selection, 
+::-webkit-selection,
+::-moz-selection,
 ::selection {
   color: white;
   background: #212121;
@@ -176,16 +177,16 @@ header li a:hover {
   width: 250px;
 }
 
-.form-content input[type=text], 
-.form-content input[type=email], 
+.form-content input[type=text],
+.form-content input[type=email],
 .form-content input[type=password] {
   border: none;
   border-bottom: 1px solid #212121;
   padding: 1px 5px;
 }
 
-.form-content input[type=text]:focus, 
-.form-content input[type=email]:focus, 
+.form-content input[type=text]:focus,
+.form-content input[type=email]:focus,
 .form-content input[type=password]:focus {
   border-bottom: 2px solid #212121;
 }
