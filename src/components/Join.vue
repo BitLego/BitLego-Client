@@ -1,8 +1,8 @@
 <template>
-  <div id="login" class="container">
+  <div id="join" class="container">
     <h1>{{title}}</h1>
     <div class="content">
-      <form action="http://virtual.silnex.kr:9949/user/login" method="post">
+      <form action="http://virtual.silnex.kr:9949/user/register" method="post">
         <div v-for="(form, index) in forms" v-bind:form="form" v-bind:key="index" class="form-content">
           <label>{{form.label}}</label>
           <input :name="form.name" :type="form.type" :placeholder="form.label" />
@@ -17,11 +17,11 @@
 
 <script>
 export default {
-  name: 'Login',
+  name: 'Join',
   data () {
     return {
-      title: 'Login', 
-      forms: [
+			title: 'Join', 
+			forms: [
 				{
 					label: 'Identity', 
 					name: 'user_id', 
@@ -31,8 +31,28 @@ export default {
 					label: 'Password', 
 					name: 'password', 
 					type: 'password'
+				},
+				{
+					label: 'Password Confirm', 
+					name: '', 
+					type: 'password'
+				},
+				{
+					label: 'Name', 
+					name: 'name', 
+					type: 'text'
+				},
+				{
+					label: 'Email', 
+					name: 'email', 
+					type: 'email'
+				},
+				{
+					label: 'Nickname', 
+					name: 'nickname', 
+					type: 'text'
 				}
-      ]
+			]
     }
   }
 }
