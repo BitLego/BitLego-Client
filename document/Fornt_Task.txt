@@ -1,0 +1,20 @@
+Page of All
+ - Get my profile from local storage
+ - Display my profile on navigation bar
+ - Go to login page If my profile doesn't exist
+Home - Timeline
+ - Request music content (Sheet Music, Count of Likes, Count of Comments, Uploader Profile) (About 5 ~ 15)
+ - Request music content again If scroll to end
+ - Mark the like
+ - Request comments of music content
+ - Request music and Play
+ - Like
+ - Comment
+Login
+ - Submit login form (Identity, Passowrd)
+Join
+ - Submit join form (Identity, Password, Name, Email, Nickname)
+Sheet Music
+ - TODO JHKwon
+Profile
+ - TODO MRYoo
