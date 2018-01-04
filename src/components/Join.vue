@@ -2,10 +2,10 @@
   <div id="join" class="container">
     <h1>{{title}}</h1>
     <div class="content">
-      <form action="http://virtual.silnex.kr:9949/user/register" method="post">
+      <form :action="this.$parent.apiServer" method="post">
         <div v-for="(form, index) in forms" v-bind:form="form" v-bind:key="index" class="form-content">
           <label>{{form.label}}</label>
-          <input :name="form.name" :type="form.type" :placeholder="form.label" />
+          <input :name="form.name" :type="form.type" :placeholder="form.label" value="" />
         </div>
         <div class="form-content">
           <input type="submit" value="submit" />
@@ -54,6 +54,6 @@ export default {
 				}
 			]
     }
-  }
+	}
 }
 </script>

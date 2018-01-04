@@ -2,7 +2,7 @@
   <div id="login" class="container">
     <h1>{{title}}</h1>
     <div class="content">
-      <form action="http://virtual.silnex.kr:9949/user/login" method="post">
+      <form v-on:submit.prevent :action="this.$parent.apiServer+'/user/login'" method="post">
         <div v-for="(form, index) in forms" v-bind:form="form" v-bind:key="index" class="form-content">
           <label>{{form.label}}</label>
           <input :name="form.name" :type="form.type" :placeholder="form.label" />
@@ -26,7 +26,7 @@ export default {
 					label: 'Identity', 
 					name: 'user_id', 
 					type: 'text'
-				},
+				}, 
 				{
 					label: 'Password', 
 					name: 'password', 

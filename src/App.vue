@@ -7,8 +7,9 @@
         </div>
         <div>
           <ul>
-            <li><a href="/#/login/">login</a></li>
-            <li><a href="/#/join/">join</a></li>
+            <li v-for="(navigationMenu, index) in navigationMenus" v-bind:navigationMenu="navigationMenu" v-bind:key="index">
+							<a :href="navigationMenu.path">{{navigationMenu.title}}</a>
+						</li>
           </ul>
         </div>
       </div>
@@ -35,7 +36,44 @@
 
 <script>
 export default {
-  name: 'app'
+	name: 'app', 
+	data() { 
+		return {
+			navigationMenus: [
+				{
+					title: 'login', 
+					path: '/#/login/'
+				}, 
+				{
+					title: 'join', 
+					path: '/#/join/'
+				} 
+			], 
+			apiServer: 'http://ss5h.tonix.kr:9949'
+		}
+	}, 
+	watch: {
+		'$route': 'initializing'
+	}, 
+	methods: {
+		initializing: function() {
+
+		}, 
+		formInitializing: function() {
+			
+		}, 
+		foreachElementsByTag: function(tagName, callback) {
+			var elements = document.getElementsByTagName(tagName);
+			foreachElements(elements, callback);
+		}, 
+		foreachElements: function(elements, callback) {
+			for (element in elements) {
+				if (elements[element] instanceof HTMLElement) {
+					callback(elements[element]);
+				}
+			}
+		}
+	}
 }
 </script>
 
@@ -158,12 +196,12 @@ header li a:hover {
 
 .form-content {
   width: 400px;
-  height: 28px;
+  min-height: 28px;
   margin: 15px 0px;
 }
 
 .form-content * {
-  height: 25px;
+  min-height: 25px;
 }
 
 .form-content label {
