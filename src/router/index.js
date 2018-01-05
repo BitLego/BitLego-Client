@@ -12,15 +12,15 @@ export default new Router({
       path: '/',
       name: 'Home',
       component: Home
-    }, 
+    },
     {
-      path: '/login', 
-      name: 'Login', 
+      path: '/login',
+      name: 'Login',
       component: Login
-    }, 
+    },
     {
-      path: '/join', 
-      name: 'Join', 
+      path: '/join',
+      name: 'Join',
       component: Join
     }
   ]
