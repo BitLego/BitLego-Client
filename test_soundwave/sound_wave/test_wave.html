@@ -8,13 +8,14 @@
 </head>
 <body>
 
-    <!-- main wavesurfer.js lib -->
+<!-- wavesurfer.js lib -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.2.3/wavesurfer.min.js"></script>
+<script src="crunker.js"></script>
 
+<!-- 노래 하나 당 div 만들어야 됨 -->
 <div id="waveform_0"></div>
 <div id="waveform_1"></div>
 <div id="waveform_2"></div>
-<div id="waveform_3"></div>
 
 <div style="text-align: center">
   <button class="btn btn-primary" onclick="wavesurfer.playPause()">
@@ -22,8 +23,40 @@
     Play
   </button>
 
+<style>
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    border: 3px solid #fff;
+  }
+
+  ::-webkit-scrollbar-button:start:decrement, ::-webkit-scrollbar-button:end:increment {
+    display: block;
+    height: 10px;
+    background: #efefef;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #efefef;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,.2);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    height: 50px; 
+    width: 50px;
+    background: rgba(0, 0, 0, .2);
+    -webkit-border-radis: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,.1);
+  }
+
+</style>
+
+<!-- 줌 -->
   <p class="row">
-    <div class="col-xs-1">
+    <div  class="col-xs-1">
       <i class="glyphicon glyphicon-zoom-in"></i>
     </div>
 
@@ -37,7 +70,7 @@
   </p>
 </div>
 
-<script src="test_wave.js"></script>
+<script src="test_wave.js?v=2"></script>
 
 </body>
 </html>
