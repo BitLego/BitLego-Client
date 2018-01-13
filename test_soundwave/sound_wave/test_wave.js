@@ -1,8 +1,8 @@
 var waveList = [];
 var tracUrls = [
     'https://ia902606.us.archive.org/35/items/shortpoetry_047_librivox/song_cjrg_teasdale_64kb.mp3',
-    'https://ia902606.us.archive.org/35/items/shortpoetry_047_librivox/song_cjrg_teasdale_64kb.mp3',
-    'https://ia902606.us.archive.org/35/items/shortpoetry_047_librivox/song_cjrg_teasdale_64kb.mp3',
+    'https://api.soundcloud.com/tracks/170230915/stream?client_id=8f474de4d1dedd5a6a4f4cbb60f4e6b8',
+    'https://api.soundcloud.com/tracks/188204240/stream?client_id=8f474de4d1dedd5a6a4f4cbb60f4e6b8'
 ];
 
 for(var t in tracUrls) {
@@ -44,3 +44,9 @@ slider.oninput = function () {
         // wavesurfer.zoom(zoomLevel);
     }
 };
+
+function playMultiple(){
+    waveList.forEach(element => {
+        element.playPause();
+    });
+}
