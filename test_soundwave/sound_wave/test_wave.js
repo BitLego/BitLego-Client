@@ -9,11 +9,35 @@ var tracUrls = [
 
 var ctx = new Crunker();
 
+function getMaxOfArray(numArray) {
+    return Math.max.apply(null, numArray);
+}
+
+function getMinOfArray(numArray) {
+    return Math.min.apply(null, numArray);
+}
+
 for(var t in tracUrls) {
     createWavesurfer(tracUrls[t], t);
     let promise = ctx.fetchAudio(tracUrls[t]);
-    promise.then(function(val){
+    promise
+    .then(function(val){
         durations.push(val[0].duration);
+    })
+    .then(function(){
+        var slider = document.querySelector('#slider');
+        slider.value = 0;
+
+        var minValue = getMinOfArray(durations);
+        var maxValue = getMaxOfArray(durations);
+
+        var sliderValue = Number((minValue / maxValue) * 200 / 10);
+
+        slider.value = sliderValue;
+
+        for(var i in waveList) {
+            waveList[i].zoom(slider.value);
+        }
     });
 }
 
