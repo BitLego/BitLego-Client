@@ -4,6 +4,9 @@ var waveList = [];
 var tracUrls = [
     'https://api.soundcloud.com/tracks/263199266/stream?client_id=8f474de4d1dedd5a6a4f4cbb60f4e6b8',
     'https://api.soundcloud.com/tracks/170230915/stream?client_id=8f474de4d1dedd5a6a4f4cbb60f4e6b8',
+    'https://api.soundcloud.com/tracks/188204240/stream?client_id=8f474de4d1dedd5a6a4f4cbb60f4e6b8',
+    'https://api.soundcloud.com/tracks/263199266/stream?client_id=8f474de4d1dedd5a6a4f4cbb60f4e6b8',
+    'https://api.soundcloud.com/tracks/170230915/stream?client_id=8f474de4d1dedd5a6a4f4cbb60f4e6b8',
     'https://api.soundcloud.com/tracks/188204240/stream?client_id=8f474de4d1dedd5a6a4f4cbb60f4e6b8'
 ];
 
@@ -47,10 +50,9 @@ function createWavesurfer(link, index) {
     // sound wave 설정
     var options = {
         container : document.querySelector('#waveform_'+ index),
-        waveColor: '#d32f2f',
+        waveColor: 'blue',
         progressColor: 'gray',
-        barWidth : 0.5,
-        cursorColor : '#black'
+        cursorColor : 'white'
     };
     
     waveList[index].init(options);
@@ -77,6 +79,13 @@ slider.oninput = function() {
 };
 
 function playMultiple(){
+    var button = document.querySelector('#play-button');
+
+    if(button.src.includes('play.svg'))
+        button.src = 'assets\\pause.svg';
+    else
+        button.src = 'assets\\play.svg';
+
     waveList.forEach(element => {
         element.playPause();
     });
