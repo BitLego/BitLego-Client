@@ -47,10 +47,9 @@ function createWavesurfer(link, index) {
     // sound wave 설정
     var options = {
         container : document.querySelector('#waveform_'+ index),
-        waveColor: '#d32f2f',
+        waveColor: 'blue',
         progressColor: 'gray',
-        barWidth : 0.5,
-        cursorColor : '#black'
+        cursorColor : 'white'
     };
     
     waveList[index].init(options);

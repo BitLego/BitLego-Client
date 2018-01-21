@@ -1,76 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>테스트</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>테스트</title>
+
+  <link rel="stylesheet" href="test_wave.css">
 </head>
+
 <body>
 
-<!-- wavesurfer.js lib -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.2.3/wavesurfer.min.js"></script>
-<script src="..\merge_mp3\crunker.js"></script>
+  <!-- wavesurfer.js lib -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.2.3/wavesurfer.min.js"></script>
+  <script src="..\merge_mp3\crunker.js"></script>
 
-<!-- 노래 하나 당 div 만들어야 됨 -->
-<div id="waveform_0"></div>
-<div id="waveform_1"></div>
-<div id="waveform_2"></div>
+  <div class="controller-container">
+    <button class="btn btn-primary" onclick="playMultiple()">
+      Play
+    </button>
 
-<div style="text-align: center">
-  <button class="btn btn-primary" onclick="playMultiple()">
-    <i class="glyphicon glyphicon-play"></i>
-    Play
-  </button>
+    <!-- 줌 -->
+    <p class="row">
+      <div class="col-xs-1">
+        <i class="glyphicon glyphicon-zoom-in"></i>
+      </div>
 
-<style>
-  ::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-    border: 3px solid #fff;
-  }
+      <div class="col-xs-10">
+        <input id="slider" type="range" min="1" max="200" value="1" style="width: 100%" />
+      </div>
 
-  ::-webkit-scrollbar-button:start:decrement, ::-webkit-scrollbar-button:end:increment {
-    display: block;
-    height: 10px;
-    background: #efefef;
-  }
+      <div class="col-xs-1">
+        <i class="glyphicon glyphicon-zoom-out"></i>
+      </div>
+    </p>
+  </div>
 
-  ::-webkit-scrollbar-track {
-    background: #efefef;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,.2);
-  }
-
-  ::-webkit-scrollbar-thumb {
-    height: 50px; 
-    width: 50px;
-    background: rgba(0, 0, 0, .2);
-    -webkit-border-radis: 8px;
-    border-radius: 8px;
-    -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,.1);
-  }
-
-</style>
-
-<!-- 줌 -->
-  <p class="row">
-    <div  class="col-xs-1">
-      <i class="glyphicon glyphicon-zoom-in"></i>
+  <!-- 노래 하나 당 div 만들어야 됨 -->
+  <div class="waveform-container">
+    <div id="waveform_0" class="waveform">
     </div>
-
-    <div class="col-xs-10">
-      <input id="slider" type="range" min="1" max="200" value="1" style="width: 100%" />
+    <div id="waveform_1" class="waveform">
     </div>
-
-    <div class="col-xs-1">
-      <i class="glyphicon glyphicon-zoom-out"></i>
+    <div id="waveform_2" class="waveform">
     </div>
-  </p>
-</div>
+  </div>
 
-<script src="test_wave.js?v=2"></script>
+  <script src="test_wave.js?v=2"></script>
 
 </body>
+
 </html>
