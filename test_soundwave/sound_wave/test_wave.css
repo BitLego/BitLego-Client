@@ -68,8 +68,10 @@ body{
     padding: 0 10px;
 }
 
-.play-button{
+#play-button{
     grid-column: 1;
+    transform: translateY(17.5px);
+    cursor: pointer;
 }
 
 .zoom-container{

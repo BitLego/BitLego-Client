@@ -76,6 +76,13 @@ slider.oninput = function() {
 };
 
 function playMultiple(){
+    var button = document.querySelector('#play-button');
+
+    if(button.src.includes('play.svg'))
+        button.src = 'assets\\pause.svg';
+    else
+        button.src = 'assets\\play.svg';
+
     waveList.forEach(element => {
         element.playPause();
     });
