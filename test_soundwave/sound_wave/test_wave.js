@@ -4,6 +4,9 @@ var waveList = [];
 var tracUrls = [
     'https://api.soundcloud.com/tracks/263199266/stream?client_id=8f474de4d1dedd5a6a4f4cbb60f4e6b8',
     'https://api.soundcloud.com/tracks/170230915/stream?client_id=8f474de4d1dedd5a6a4f4cbb60f4e6b8',
+    'https://api.soundcloud.com/tracks/188204240/stream?client_id=8f474de4d1dedd5a6a4f4cbb60f4e6b8',
+    'https://api.soundcloud.com/tracks/263199266/stream?client_id=8f474de4d1dedd5a6a4f4cbb60f4e6b8',
+    'https://api.soundcloud.com/tracks/170230915/stream?client_id=8f474de4d1dedd5a6a4f4cbb60f4e6b8',
     'https://api.soundcloud.com/tracks/188204240/stream?client_id=8f474de4d1dedd5a6a4f4cbb60f4e6b8'
 ];
 
