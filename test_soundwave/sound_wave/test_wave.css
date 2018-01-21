@@ -1,20 +1,3 @@
-body{
-    margin: 0;
-    padding: 0;
-}
-
-.waveform{
-    padding-bottom: 20px;
-}
-
-.waveform:nth-child(odd) {
-    background: rgba(0, 0, 0, 0.1);
-}
-
-.waveform:nth-child(even) {
-    background: white;
-}
-
 ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
@@ -43,7 +26,56 @@ body{
     -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,.1);
 }
 
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.waveform wave{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.waveform canvas{
+    position: relative !important;
+}
+
+.waveform:nth-child(odd) {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.waveform:nth-child(even) {
+    background: white;
+}
+
 .controller-container{
+    display: grid;
+    grid-template-columns: minmax(100px, auto);
+    grid-auto-rows: minmax(50px, 50px);
+    grid-gap: 0px;
     height: 50px;
     background: #555555;
+}
+
+.zoom-container *{
+    transform-origin: 50%;
+    transform: translateY(50%);
+}
+
+.controller-container img{
+    width: 15px;
+    height: 15px;
+    padding: 0 10px;
+}
+
+.play-button{
+    grid-column: 1;
+}
+
+.zoom-container{
+    grid-column: 2;
+}
+
+#slider{
+    width: 20vw;
 }

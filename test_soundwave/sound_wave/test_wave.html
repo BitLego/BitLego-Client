@@ -17,24 +17,16 @@
   <script src="..\merge_mp3\crunker.js"></script>
 
   <div class="controller-container">
-    <button class="btn btn-primary" onclick="playMultiple()">
+    <button class="btn btn-primary play-button" onclick="playMultiple()">
       Play
     </button>
 
-    <!-- 줌 -->
-    <p class="row">
-      <div class="col-xs-1">
-        <i class="glyphicon glyphicon-zoom-in"></i>
-      </div>
-
-      <div class="col-xs-10">
-        <input id="slider" type="range" min="1" max="200" value="1" style="width: 100%" />
-      </div>
-
-      <div class="col-xs-1">
-        <i class="glyphicon glyphicon-zoom-out"></i>
-      </div>
-    </p>
+    <div class="zoom-container">
+      <img src="assets\minus.svg">
+      <!-- 줌 -->
+      <input id="slider" type="range" min="0" max="100" value="0"/>
+      <img src="assets\plus.svg">
+    </div>
   </div>
 
   <!-- 노래 하나 당 div 만들어야 됨 -->
