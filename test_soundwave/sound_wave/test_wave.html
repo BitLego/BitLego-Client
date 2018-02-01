@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>테스트</title>
+
+  <link rel="stylesheet" href="test_wave.css">
+</head>
+
+<body>
+
+  <!-- wavesurfer.js lib -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.2.3/wavesurfer.min.js"></script>
+  <script src="..\merge_mp3\crunker.js"></script>
+
+  <div class="controller-container">
+    <img id="play-button" src="assets\play.svg" onclick="playMultiple()">
+
+    <div class="zoom-container">
+      <img src="assets\minus.svg">
+      <!-- 줌 -->
+      <input id="slider" type="range" min="0" max="100" value="0"/>
+      <img src="assets\plus.svg">
+    </div>
+  </div>
+
+  <!-- 노래 하나 당 div 만들어야 됨 -->
+  <div class="waveform-container">
+    <div id="waveform_0" class="waveform">
+    </div>
+    <div id="waveform_1" class="waveform">
+    </div>
+    <div id="waveform_2" class="waveform">
+    </div>
+    <div id="waveform_3" class="waveform">
+    </div>
+    <div id="waveform_4" class="waveform">
+    </div>
+    <div id="waveform_5" class="waveform">
+    </div>
+  </div>
+
+  <script src="test_wave.js?v=2"></script>
+
+</body>
+
+</html>
